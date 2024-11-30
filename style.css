@@ -1,0 +1,282 @@
+:root{
+    --primary-red : #E50915;
+    --primary-radius: 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    
+}
+
+li{
+    display: inline-block;
+    margin: 12px 0;
+    width: 100%;
+}
+
+
+body{
+    background-color: #000;
+    color: white;
+}
+
+i{
+    cursor: pointer;
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    
+
+}
+.logo{
+    width: 150px;
+    height: 150px;
+}
+
+.right-nav{
+    display: flex;
+    align-items: center;
+}
+
+.select-box{
+    border: 1px solid black;
+    padding: 8px;
+
+}
+
+
+
+.signin-btn{
+    background-color: var(--primary-red);
+    border: none;
+    color: white;
+    transition: all .4s;
+    margin-left: 20px;
+    border-radius: var(--primary-radius);
+    height: 35px;
+    width: 80px;
+    font-size: 12px;
+
+}
+
+#banner{
+    background-image: linear-gradient(rgba(0,0,0,0.772), rgba(0,0,0,0.758)), url("images/bgHero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.hero{
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    
+}
+
+.descriptionBanner{
+    max-width: 1000px;
+    padding: 0 10px;
+}
+
+.title{
+    font-size: 4rem ;
+}
+
+.inputBanner{
+    height: 70px;
+    padding: 0;
+}
+
+.email-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#getStarted{
+    background-color: var(--primary-red);
+    color: white;
+    border-radius: var(--primary-radius);
+    padding: 20px;
+    border: none;
+    
+    
+}
+
+#emailConnexion{
+    background-color: #2a262650;
+    color: white;
+    max-width: 400px;
+    margin-right: 10px;
+    padding: 20px;
+}
+
+
+
+
+/*Trending Now*/
+
+
+
+
+#join{
+    padding: 50px 125px;
+}
+
+
+
+.main-title{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 20px;
+
+}
+
+
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.join-card{
+    background: linear-gradient(140deg, #192247 0%, #210E17 96.86%);
+    color: white;
+    flex-basis: 24%;
+    border-radius: 10px;
+    padding: 25px;
+    height: 300px;
+}
+
+.join-card > h1{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.join-card p {
+    color: gray;
+    margin: 10px 0;
+}
+
+.join-card img{
+    width: 50px;
+
+}
+
+
+
+
+
+
+#faq{
+    padding: 10px 140px;
+  
+}
+
+
+    
+.question{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.question:hover{
+    background-color: #555 ;
+}
+
+
+.question, .response{
+    background-color: #333;
+    padding: 20px 30px;
+    font-size: 20px;
+}
+
+.custombtn{
+    box-shadow: none;
+    border: none;
+    color: white;
+}
+
+
+
+.wrapperFooter{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+
+
+
+/* Deux colonnes pour les écrans entre 600px et 900px */
+@media (max-width: 1200px) { 
+    .wrapper { 
+        grid-template-columns: repeat(2, 1fr); }
+    
+    .wrapperFooter{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+        #join{
+            padding: 50px 20px;
+         } 
+
+         #faq{
+            padding: 50px 30px;
+         } 
+    }
+/* Une colonne pour les écrans de moins de 600px */
+@media (max-width: 900px) {
+    .wrapper { 
+    grid-template-columns: 1fr;
+    }
+    #join{
+        padding: 50px 10px;
+        }
+
+    .join-card{
+        height: 180px;
+    }
+
+    #faq{
+        padding: 50px 10px;
+    }
+
+    .wrapperFooter{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #getStarted{
+        height: 75px;
+    }
+
+    }
+    @media (max-width: 600px) { 
+        .wrapperFooter { grid-template-columns: 1fr; 
+        }
+    
+        .title{
+            font-size: 2rem ;
+        }
+        #getStarted{
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            height: 75px;
+        }
+    }
